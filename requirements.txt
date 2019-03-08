@@ -1,10 +1,7 @@
-tqdm
+awscli
+click
 matplotlib
-nltk
 jupyter
-pandas
-seaborn
-scipy
-annoy
-numpy
-requests
+notebook
+Sphinx
+flake8
