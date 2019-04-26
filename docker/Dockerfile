@@ -78,5 +78,9 @@ RUN conda install -y -c menpo opencv3=3.1.0 \
 # Set working directory
 WORKDIR /work
 
+# Install this modle in /recipe-qa-org dirctory to install dependencies
+COPY ./requirements.txt /requirements.txt
+RUN pip install -r /requirements.txt
+
 # Set the default command to bash
 ENTRYPOINT ["/bin/bash"]

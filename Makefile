@@ -77,7 +77,7 @@ sync-from-source: ## download data data source to local envrionment
 	-aws s3 sync $(DATA_SOURCE) ./data/
 
 init-docker: ## initialize docker image
-	$(DOCKER) build --no-cache -t $(IMAGE_NAME) -f $(DOCKERFILE) --build-arg UID=$(shell id -u) .
+	$(DOCKER) build -t $(IMAGE_NAME) -f $(DOCKERFILE) --build-arg UID=$(shell id -u) .
 
 sync-to-source: ## sync local data to data source
 	-aws s3 sync ./data/ $(DATA_SOURCE)
